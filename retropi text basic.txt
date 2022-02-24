@@ -1,0 +1,8 @@
+Mention retro arch, emulation station etc.
+
+
+Procedure for installing...
+
+The Retropi files are stored in one large image, and we have to get that image onto the memory card. 
+
+1. 

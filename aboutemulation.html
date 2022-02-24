@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A word about emulation</title>
+
+    <link rel="icon" type="image/png" href="favicon-32x32.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="navbar">
+        <a href="index.html"> Home</a>
+        <a href="aboutemulation.html"> About Emulation</a>
+        <a href="installing.html"> Installing RetroPie</a>
+        <a href="commodoreinstall.html">Adding a Commodore</a>
+            </div>
+
+
+<h1> What is an emulator?</h1>
+
+<p>The idea behind an emulator is very simple and goes back to the dawn of computing science. Alan Turing came up with a modern for a 'universal computing machine' that could perform logical and mathematical functions, eventually this morphed into the early electronic WW2-era decryption machines and then the first electronic computers. In theory a computer can do the same work as any other computer, providing there is enough time for the program to execute. In practice this isn't that easy - a small 8 bit computer, for example, would not have the memory to store the types of programs we see on a modern PC. However, the jump in computing power over the past few decades means that a typical computer in 2021 is vastly more powerful than a similarly-priced machine from the 80s - on the order of thousands of times more powerful. </p>
+
+<p>We can use that power to make the modern machine pretend to be the older one, thus emulating its functionality. Running the software on its own is difficult (aside from a certain compatibility across PC architectures), so we really need to write a program that can pretend to be the old computer and then run the original software inside this simulated hardware.</p>
+
+<p> In order to do this considerable work is required. First the original hardware's microprocessor has to be reliably emulated. While today's computing platforms generally run on one of two processing families (x86 and ARM), vintage computers had a more diverse grouping of CPUs, the most popular being the 6502 (BBC Micro, C64, Apple, Electron), the Z80 (Spectrum, Amstrad) and the 68000 series (Atari ST, Amiga, Vintage Macs) Interpreting machine code instructions and translating them to modern code is straightforward enough but the emulated CPU has to include all the originals timing functions, interrupts and similar. Many older machines also contained custom chips that performed functions such as sound production and displaying sprite graphics. These chips have to be emulated, too - along with all their relevant timing systems. </p>
+
+<br>
+<!-- bit of an easter egg here, heh -->
+<center> 
+<img src="electroninside.jpg"> 
+<br>
+<a href="electronuserapril1990.jpg" target="_blank"> <p>Inside the popular Acorn Electron running a 6502 processor and custom ULA chip</p></a>
+</center>
+<br>
+
+<p>As such it means that emulating a system 100% may not always be possible but it is often close enough to be indistinguishable to the casual user. In certain cases some computer hardware might be tricky to duplicate and so software solutions are created to give a reasonable fascimile. For example the 1980s Vectrex console used a special vector display that drew images as lines on a cathode ray tube, rather than via the usual pixels route. A Vectrex emulator would make use of modern high-resolution graphics to create bitmapped images that look similar to the original display. </p>
+
+<p> This raises an interesting issue - as a modern PC's graphics are far more advanced than, say, a 1980s 8 bit machine, programmers can add enhancements that did not exist in the original. One obvious example is the ability to display output digitally on a modern monitor. Old machines typically had an analogue output that was sent to a TV set via a cable plugged into the aerial socket. This often resulted in a fuzzy image. Emulators dispense with this and so have a clear picture. This in itself can be a problem as old graphics which looked pretty good on a vintage colour TV set tend to look blocky and harsh on today's HD displays. While lower resolution images will always look poorer than their higher-resolution descendents, some emulators can smooth out the pixels or upscale them for more visual appeal.</p>
+
+<p> To recap, programmers can write software on today's computer that can effectively pretend to be computers from the early days. They can add improvements to make everything consistent with modern hardware. They might also be able to enhance the original machine timings to make the emulated machine run faster than the original. How do we get the old software onto our 21st Century PCs?</p>
+
+<p>Old software came in various media types - from 5 1/2 inch floppy discs to audio tapes to cartridge. Different techniques are used to get that original digital data into a form that can be processed on modern machines. This might be via a pure hardware approach - such as by using actual vintage computers and sending the data over a network connection, by creating dedicate electronics to read data off old Read Only Memory (ROM) chips and on occasion via programs utilising simple tricks. For example a game on audio tape can be played on a tape recorder with its output plugged into a PC. The PC can then sample the resulting sound wave & use a program to translate that into an exact copy of the original game data. Typically emulator software is referred to as a ROM (a copy of code from memory chips usually on a cartridge as with the Nintento NES and Megadrive) or an Image (an exact image of the code from a disc or tape). With the ROMS saved as pc-readable files they can easily be imported into the emulator and run just like the originals. </p>
+<center>
+<img src="sonic1.jpg" alt="A Megadrive Cartridge">
+<br>
+<p>The inside of a 1991 Sonic the Hedgehog Megadrive cartridge</p>
+<br><br>
+<img src="sonic2.jpg" alt="Circuit board">
+<br>
+<p>The circuit board showing ROM chip holding the original code</p>
+
+<br>
+
+</center>
+</body>
+<p>Uses of Emulation</p>
+
+<p>Emulating old computer technology can be a form of digital preservation allowing modern users to see software working that was written decades ago and for which the original hardware may not even exist anymore. It is also a good exercise in computer science and as a learning tool can teach the programmer a lot about low-level computer functions. The most popular use of emulators these days are of course those that allow us to run old games. While there is a thriving <a href="https://www.youtube.com/channel/UCLEoyoOKZK0idGqSc6Pi23w" target="_blank"> retro tech scene</a> with thousands of enthusiasts <a href="https://www.youtube.com/c/adriansdigitalbasement/videos" target="_blank">across the globe </a>repairing and maintaining older hardware, this can be a somewhat expensive hobby requiring a working knowledge of electronics, so is not for everybody and for many people a visit to the <a href="http://www.computinghistory.org.uk/" target="_blank">Center for Computing History</a> might be the closest they get to see vintage hardware in a working state. Emulation is much simpler and with some configuration any modern computer can emulate a long list of earlier popular digital platforms. To make things easier, many emulators come complete with customisable graphical front-ends and installation & configuration is considerably easier than with first generation emulators that needed a lot of work to get running.</p>
+
+<p> The ROMS issue</p>
+<p> There are issues concerning ROMS and images. Copying software is a form of copyright infringement and certain companies will crack down on what they see as piracy. However much of the older software was made by companies that no longer exist and the programs have no real commercial appeal. As such sites hosting ROMs and related files are widespread & generally speaking the practice is tolerated as the vast majority of users are doing it because the original games are not easily available & the emulator projects are usually non-commercial and are run by enthusiasts who are doing it for admiration and nostalgia, not for profit. Interestingly the boom in emulators has often given life to old games that are either re-created for new audiences or the original ROMs are used on commerical emulator boxes (such as the C64 mini or the Sega Megadrive Mini) where royalties are paid to the programmers. Both commercial and non-commercial projects coexist.</p>
+
+<p>RetroPie</p>
+
+<p>It is possible to run popular emulators on any modern computer.There are even emulators written in Javascript that run inside a web-browser - although performance can be poor with web-based emulation unless you are running high-end hardware. The Raspberry Pi is a small computer designed for the hobbyist. Despite its diminuative form factor, the Pi is a powerful device featuring a multi-core processor, one or more gigabytes of RAM and the ability to load software from a memory card as standard. As such it is fast enough to emulate many older machines & even some late 90s consoles such as the N64 or the Gameboy Color. </p>
+
+<p>Due to the small physical footprint of the Pi, it makes an ideal retro game box that can easily be plugged into any TV with a spare HDMI port. The install page will run through a basic set-up procedure where the whole system can run via a wireless controller.</p>
+
+<p>Note: For some old computer games keyboard access is required. In the example am using an old USB keyboard but it will work equally well with a typical wireless keyboard or a smaller hybrid keyboard/input device like the Rii mini. </p>
+<br>
+<div class="footer">Page design and content by Rob, February 2022.</div>
+
+
+</body>
+</html>
